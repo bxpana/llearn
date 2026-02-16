@@ -1,16 +1,10 @@
 import { Module } from "./types";
 import { promptEngineeringModule } from "@/content/prompt-engineering";
+import { evaluationFrameworksModule } from "@/content/evaluation-frameworks";
 
 const modules: Module[] = [
   promptEngineeringModule,
-  {
-    slug: "evaluation-frameworks",
-    title: "Evaluation Frameworks",
-    description: "Build evals to measure and improve LLM output quality.",
-    icon: "📊",
-    lessons: [],
-    comingSoon: true,
-  },
+  evaluationFrameworksModule,
   {
     slug: "agent-frameworks",
     title: "Agent Frameworks",
