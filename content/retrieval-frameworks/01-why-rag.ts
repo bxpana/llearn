@@ -20,7 +20,7 @@ export const whyRag: Lesson = {
 **Why not just use long context windows?** Modern models support 100K+ token contexts, so why not dump all your documents in? Three reasons:
 
 - **Cost and latency** — sending 100K tokens per request is expensive and slow
-- **Lost in the middle** — models struggle to attend to information buried in very long contexts, especially in the middle of the window
+- **Lost in the middle** — models struggle to attend to information buried in very long contexts, especially in the middle of the window (though newer models are steadily improving their long-context attention, this remains a consideration when designing retrieval systems)
 - **Scale limits** — most organizations have far more data than fits in any context window
 
 **When RAG is the right choice:**

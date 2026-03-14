@@ -30,7 +30,7 @@ export const embeddingsSearch: Lesson = {
 
 - **Cosine similarity** — measures the angle between vectors (most common; works well for normalized embeddings)
 - **Euclidean distance** — measures straight-line distance (sensitive to vector magnitude)
-- **Dot product** — measures alignment and magnitude (fast, often used with normalized vectors)
+- **Dot product** — measures alignment and magnitude. When vectors are normalized, dot product and cosine similarity produce identical results — dot product is preferred for pre-normalized vectors because it skips the normalization step at query time
 
 **The indexing pipeline** for a RAG system follows these steps:
 

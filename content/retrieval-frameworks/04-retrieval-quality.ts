@@ -34,15 +34,7 @@ Re-ranking models (like Cohere Rerank, or cross-encoder models) compare the quer
 
 Hybrid search handles queries where keyword matching matters (product codes, error messages, names) and queries where semantic matching matters (paraphrased questions, conceptual queries).
 
-**Evaluating retrieval separately from generation** is critical. When a RAG system gives a wrong answer, you need to know whether the problem was retrieval (wrong chunks were fetched) or generation (right chunks were fetched but the LLM used them poorly). Build a retrieval evaluation set:
-
-1. Collect 20-50 representative queries
-2. For each query, identify the relevant chunks in your knowledge base (ground truth)
-3. Run each query through your retrieval pipeline
-4. Calculate precision@k and recall@k for each query
-5. Aggregate into average precision and recall scores
-
-This evaluation should be automated and run after any change to chunking, embedding models, or search parameters. Without it, you're optimizing blind.`,
+**Evaluating retrieval separately from generation** is critical. When a RAG system gives a wrong answer, you need to know whether the problem was retrieval (wrong chunks were fetched) or generation (right chunks were fetched but the LLM used them poorly). As a quick sanity check, collect a small set of representative queries with known relevant chunks and verify that your retrieval pipeline returns them. We'll cover comprehensive evaluation methodology — including building evaluation datasets, choosing metrics, and diagnosing failure modes — in the RAG Evaluation lesson.`,
     whyItMatters:
       "Retrieval is the foundation of RAG — if the wrong context is retrieved, the LLM has no chance of producing a correct answer. Separately measuring retrieval quality gives you a clear signal for where to invest optimization effort. Teams that skip retrieval evaluation waste time tweaking generation prompts when the real problem is that the right documents never reach the model.",
     keyPrinciples: [
