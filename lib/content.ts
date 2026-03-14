@@ -1,6 +1,7 @@
 import { Module } from "./types";
 import { promptEngineeringModule } from "@/content/prompt-engineering";
 import { evaluationFrameworksModule } from "@/content/evaluation-frameworks";
+import { implementationPatternsModule } from "@/content/implementation-patterns";
 
 const modules: Module[] = [
   promptEngineeringModule,
@@ -23,15 +24,7 @@ const modules: Module[] = [
     lessons: [],
     comingSoon: true,
   },
-  {
-    slug: "implementation-patterns",
-    title: "LLM Implementation Patterns",
-    description:
-      "Streaming, tool use, multi-turn conversations, error handling, and token management.",
-    icon: "⚙️",
-    lessons: [],
-    comingSoon: true,
-  },
+  implementationPatternsModule,
 ];
 
 export function getAllModules(): Module[] {
