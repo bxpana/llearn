@@ -153,7 +153,7 @@ Write the rubric as a structured document with clear headings.`,
       },
       {
         type: "regex",
-        value: "(1|one).{1,80}(3|three).{1,80}(5|five)",
+        value: "(1|one)[\\s\\S]{1,300}(3|three)[\\s\\S]{1,300}(5|five)",
         message:
           "Include anchor descriptions at multiple levels (e.g., 1, 3, and 5) for your scoring scale.",
       },

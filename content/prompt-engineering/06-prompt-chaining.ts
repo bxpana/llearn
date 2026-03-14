@@ -109,7 +109,7 @@ This week we processed 50 support tickets, up 12% from last week's 44.
       annotations: [
         {
           text: "Step 1: Categorize and Extract",
-          note: "First step is pure extraction — simple, reliable, and produces clean structured data.",
+          note: "NOTE: This example shows all three steps in one message for illustration purposes. In a real implementation, each step is a separate API call — you run Step 1, collect its output, then programmatically pass that output into the Step 2 prompt, and so on.",
         },
         {
           text: "Step 2: Analyze Patterns",

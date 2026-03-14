@@ -28,7 +28,7 @@ A successful eval adoption plan has three elements:
 
 The most common failure mode: engineering builds evals in isolation without domain expert input. The evals measure the wrong things, nobody trusts the results, and the effort is wasted.`,
     whyItMatters:
-      "As an SA, you'll often be the person advising organizations on how to adopt evals. Most customers don't need help writing regex validators — they need help structuring the human and process side. A phased plan with clear stakeholder roles and business framing is often the most valuable artifact you can deliver.",
+      "As someone guiding an organization's LLM adoption, you'll often be the person advising teams on how to adopt evals. Most teams don't need help writing regex validators — they need help structuring the human and process side. A phased plan with clear stakeholder roles and business framing is often the most valuable artifact you can deliver.",
     keyPrinciples: [
       "Start with one high-impact use case, not a company-wide eval initiative",
       "Domain experts define quality — engineers build the measurement system",

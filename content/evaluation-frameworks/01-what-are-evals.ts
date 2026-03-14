@@ -22,7 +22,7 @@ Without evals, teams rely on "it looks good to me" — a developer eyeballs a fe
 
 Evals turn subjective quality judgment into a repeatable, measurable process. They're the foundation of any production LLM system.`,
     whyItMatters:
-      "Every production LLM deployment needs a way to answer 'is this good enough?' before shipping and 'is it still good enough?' after changes. Evals give you that answer with data instead of gut feeling. As an SA, helping customers set up their first eval is often the highest-leverage thing you can do.",
+      "Every production LLM deployment needs a way to answer 'is this good enough?' before shipping and 'is it still good enough?' after changes. Evals give you that answer with data instead of gut feeling. As someone building LLM-powered applications, setting up your first eval is often the highest-leverage thing you can do.",
     keyPrinciples: [
       "Every eval has three parts: test inputs, system under test, and scoring criteria",
       "Manual spot-checking doesn't scale — evals make quality measurement repeatable",
