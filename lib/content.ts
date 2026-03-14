@@ -1,6 +1,7 @@
 import { Module } from "./types";
 import { promptEngineeringModule } from "@/content/prompt-engineering";
 import { evaluationFrameworksModule } from "@/content/evaluation-frameworks";
+import { retrievalFrameworksModule } from "@/content/retrieval-frameworks";
 
 const modules: Module[] = [
   promptEngineeringModule,
@@ -14,15 +15,7 @@ const modules: Module[] = [
     lessons: [],
     comingSoon: true,
   },
-  {
-    slug: "retrieval-frameworks",
-    title: "Retrieval (RAG)",
-    description:
-      "Implement retrieval-augmented generation with chunking, embeddings, and search.",
-    icon: "🔍",
-    lessons: [],
-    comingSoon: true,
-  },
+  retrievalFrameworksModule,
   {
     slug: "implementation-patterns",
     title: "LLM Implementation Patterns",
