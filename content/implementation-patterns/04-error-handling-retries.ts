@@ -15,7 +15,7 @@ The errors you'll encounter fall into predictable categories:
 
 - **429 Rate Limit** — you've exceeded your requests-per-minute or tokens-per-minute quota. The response usually includes a \`Retry-After\` header indicating when to try again.
 - **500/503 Server Error** — the API is temporarily unavailable or overloaded. These are transient and typically resolve within seconds to minutes.
-- **408/504 Timeout** — the request took too long. This often happens with very long prompts or when the model generates maximum-length responses.
+- **504 Gateway Timeout** — the request took too long. This often happens with very long prompts or when the model generates maximum-length responses. (Note: 408 Request Timeout is rare from LLM APIs — most timeouts manifest as 504 from API gateways or as client-side timeout errors.)
 - **400 Bad Request** — your request is malformed (invalid JSON, messages too long, unsupported parameters). These are not retryable without fixing the request.
 - **Content Filter Triggers** — the model refuses to generate a response due to safety filters. The response may have a specific finish reason or error code.
 

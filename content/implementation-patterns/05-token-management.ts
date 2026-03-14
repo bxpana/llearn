@@ -273,11 +273,21 @@ Applying all three strategies together (accounting for overlaps):
 4. Both tiers benefit from prompt caching on static content
 
 **Optimized monthly cost:**
-- Cheap model (135k queries): $90 input + $112.50 output - $38.70 caching = ~$164/month
-- Expensive model (90k queries): $540 input + $675 output - $291.60 caching = ~$923/month
-- Total: ~$1,087/month
+- Cheap model (135k queries):
+  - Input: 135k × 2,000 = 270M tokens (80% cached at 90% discount)
+    - Cached: 216M × $0.025/1M = $5.40
+    - Uncached: 54M × $0.25/1M = $13.50
+  - Output: 67.5M × $1.25/1M = $84.38
+  - Subtotal: $103.28/month
+- Expensive model (90k queries):
+  - Input: 90k × 2,000 = 180M tokens (80% cached at 90% discount)
+    - Cached: 144M × $0.30/1M = $43.20
+    - Uncached: 36M × $3/1M = $108.00
+  - Output: 45M × $15/1M = $675.00
+  - Subtotal: $826.20/month
+- Total: $103.28 + $826.20 = $929.48/month
 
-**Total reduction: ~$2,963/month (73% savings vs. $4,050 baseline)**. This exceeds the 40% target by a wide margin.
+**Total reduction: ~$3,120/month (77% savings vs. $4,050 baseline)**. This exceeds the 40% target by a wide margin.
 
 ### Monitoring Plan
 **Dashboard metrics (real-time):**
