@@ -13,7 +13,7 @@ export const whenToUseAgents: Lesson = {
 
 **Level 2: Prompt Chains** — A fixed sequence of LLM calls where the output of one step feeds into the next. For example: extract key entities from a document, then generate a summary focusing on those entities, then translate the summary. Each step is predictable and the sequence is determined at design time, not runtime. Use prompt chains when the task has multiple stages but the steps are known in advance.
 
-**Level 3: Tool Use (Single Turn)** — The model can call external tools (APIs, databases, calculators) to gather information or take actions, but does so in a single planning step. The model decides which tools to call, executes them, and produces a final response. This is appropriate when the model needs external data but the task doesn't require iterative reasoning.
+**Level 3: Tool Use (Single Turn)** — The model can call external tools (APIs, databases, calculators) to gather information or take actions. This still involves a round-trip — the model proposes tool calls, the runtime executes them, the results are sent back, and the model produces a final response — but the key distinction from an agent loop is that it resolves in a single planning step rather than iterating. This is appropriate when the model needs external data but the task doesn't require multi-step reasoning where later actions depend on earlier results.
 
 **Level 4: Agent Loops** — The model operates in a loop: observe the current state, reason about what to do next, take an action (often a tool call), observe the result, and repeat until the task is complete or a stop condition is met. Agents can handle open-ended tasks where the number of steps isn't known in advance, where intermediate results change the plan, and where complex reasoning spans multiple tool interactions.
 
@@ -23,13 +23,13 @@ export const whenToUseAgents: Lesson = {
 - Is the number of steps **unpredictable**? If yes, you need an agent loop. If the steps are fixed, use a prompt chain.
 - Does the task require **iterative refinement** based on intermediate feedback? If yes, an agent is appropriate.
 
-A common mistake is building a full agent for a task that could be solved with a single prompt. Agents add 3-10x latency, increase token costs due to repeated context, and introduce new failure modes (infinite loops, tool errors, planning mistakes). Start with the simplest pattern that works and only escalate when you hit a genuine limitation.`,
+A common mistake is building a full agent for a task that could be solved with a single prompt. Agents typically add 3-10x latency, increase token costs due to repeated context, and introduce new failure modes (infinite loops, tool errors, planning mistakes). Start with the simplest pattern that works and only escalate when you hit a genuine limitation.`,
     whyItMatters:
       "Choosing the wrong complexity level is expensive in both directions. Under-building means your system can't handle the task. Over-building means unnecessary latency, cost, and failure modes. As a practitioner, knowing exactly when to reach for an agent versus a simpler pattern saves weeks of development and produces more reliable systems.",
     keyPrinciples: [
       "Start with the simplest pattern that solves the task — direct prompt first, then chain, then tool use, then agent loop",
       "Use agents only when the number of steps is dynamic and later steps depend on the results of earlier ones",
-      "Agents add 3-10x latency and cost over direct prompts, so the task complexity must justify the overhead",
+      "Agents typically add 3-10x latency and cost over direct prompts, so the task complexity must justify the overhead",
       "If the sequence of steps is known at design time, a prompt chain is more reliable than an agent loop",
     ],
   },

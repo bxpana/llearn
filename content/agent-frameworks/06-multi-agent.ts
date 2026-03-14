@@ -49,7 +49,7 @@ Avoid hidden shared state where agents implicitly depend on side effects of othe
     whyItMatters:
       "Real-world applications often span multiple domains that each require specialized knowledge and different tools. Trying to cram everything into one agent produces a system that's mediocre at everything. Multi-agent orchestration lets you build focused, testable, maintainable agents that each excel at their domain, while the orchestration layer handles routing and coordination.",
     keyPrinciples: [
-      "Use multi-agent when a single system prompt would exceed 2000 tokens of instructions or cover 3+ distinct domains",
+      "Consider multi-agent when a single system prompt must serve 3+ distinct domains with conflicting behavioral instructions — prompt complexity, not just length, is the driver",
       "Choose your orchestration pattern based on the task structure: router for classification, supervisor for complex coordination, pipeline for sequential processing",
       "Pass context between agents through structured handoff objects with explicit fields, not raw conversation dumps",
       "Every piece of shared state should be explicitly defined — avoid agents depending on implicit side effects of other agents",
