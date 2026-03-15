@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LLearn
+
+An interactive web app for learning LLM implementation patterns through hands-on exercises. Write prompts, get instant structural feedback, and build practical skills — no API keys required.
+
+## Modules
+
+- **Prompt Engineering** — Clear instructions, system prompts, few-shot examples, chain-of-thought, structured output, prompt chaining, and common pitfalls
+- **Evaluation Frameworks** — Designing test cases, scoring rubrics, eval-driven iteration, production eval suites, and organizational strategy
+- **Agent Frameworks** — Tool design, agent loops, planning and decomposition, error handling, and multi-agent orchestration
+- **Retrieval (RAG)** — Chunking strategies, embeddings and vector search, retrieval quality, prompt design for RAG, and pipeline evaluation
+- **LLM Implementation Patterns** — Streaming, tool use, multi-turn conversations, error handling and retries, token management, and safety filtering
+
+Each module contains 6–7 lessons with explanations, annotated good/bad examples, and an interactive exercise with validation.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 22+ (use `nvm use 22` if needed)
+
+### Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to start learning.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Other commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # Production build (includes TypeScript checks)
+npm run lint    # Run ESLint
+npm start       # Serve production build
+```
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 14+ (App Router), TypeScript, Tailwind CSS, shadcn/ui, CodeMirror
