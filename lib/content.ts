@@ -1,20 +1,12 @@
 import { Module } from "./types";
 import { promptEngineeringModule } from "@/content/prompt-engineering";
 import { evaluationFrameworksModule } from "@/content/evaluation-frameworks";
-import { implementationPatternsModule } from "@/content/implementation-patterns";
+import { agentFrameworksModule } from "@/content/agent-frameworks";
 
 const modules: Module[] = [
   promptEngineeringModule,
   evaluationFrameworksModule,
-  {
-    slug: "agent-frameworks",
-    title: "Agent Frameworks",
-    description:
-      "Design tool-using agents with planning loops and orchestration.",
-    icon: "🤖",
-    lessons: [],
-    comingSoon: true,
-  },
+  agentFrameworksModule,
   {
     slug: "retrieval-frameworks",
     title: "Retrieval (RAG)",
