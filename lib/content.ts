@@ -16,15 +16,7 @@ const modules: Module[] = [
     lessons: [],
     comingSoon: true,
   },
-  {
-    slug: "implementation-patterns",
-    title: "LLM Implementation Patterns",
-    description:
-      "Streaming, tool use, multi-turn conversations, error handling, and token management.",
-    icon: "⚙️",
-    lessons: [],
-    comingSoon: true,
-  },
+  implementationPatternsModule,
 ];
 
 export function getAllModules(): Module[] {
