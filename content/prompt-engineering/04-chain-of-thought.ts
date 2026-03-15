@@ -19,7 +19,7 @@ There are two main approaches:
 - **Explicit instruction** — add "Think step by step" or "Show your reasoning"
 - **Structured reasoning** — provide a reasoning framework like "First analyze X, then consider Y, finally conclude Z"`,
     whyItMatters:
-      "CoT is essential for any LLM application that involves reasoning, decision-making, or analysis. Without it, models often pattern-match to a plausible-sounding but wrong answer. With CoT, accuracy on reasoning tasks can improve by 30-50%. It also makes outputs auditable — you can verify the reasoning, not just the answer.",
+      "CoT is essential for any LLM application that involves reasoning, decision-making, or analysis. Without it, models often pattern-match to a plausible-sounding but wrong answer. With CoT, accuracy on reasoning tasks can improve significantly — in some benchmarks by 30% or more, though results vary by task and model. It also makes outputs auditable — you can verify the reasoning, not just the answer.",
     keyPrinciples: [
       "Ask for reasoning BEFORE the final answer — order matters",
       "Use structured frameworks for complex decisions: 'Analyze the pros, then the cons, then recommend'",
