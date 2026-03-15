@@ -2,20 +2,14 @@ import { Module } from "./types";
 import { promptEngineeringModule } from "@/content/prompt-engineering";
 import { evaluationFrameworksModule } from "@/content/evaluation-frameworks";
 import { agentFrameworksModule } from "@/content/agent-frameworks";
+import { retrievalFrameworksModule } from "@/content/retrieval-frameworks";
+import { implementationPatternsModule } from "@/content/implementation-patterns";
 
 const modules: Module[] = [
   promptEngineeringModule,
   evaluationFrameworksModule,
   agentFrameworksModule,
-  {
-    slug: "retrieval-frameworks",
-    title: "Retrieval (RAG)",
-    description:
-      "Implement retrieval-augmented generation with chunking, embeddings, and search.",
-    icon: "🔍",
-    lessons: [],
-    comingSoon: true,
-  },
+  retrievalFrameworksModule,
   implementationPatternsModule,
 ];
 
